@@ -1,7 +1,6 @@
 import random
 import sys
 
-
 arguments = sys.argv
 words = arguments[1:]
 
@@ -14,3 +13,5 @@ while len(words) > 0:
     pass
 
 print(newRanomizedArray)
+
+# learning how to commit on development branch
