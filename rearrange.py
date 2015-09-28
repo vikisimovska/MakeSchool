@@ -1,7 +1,6 @@
 import random
 import sys
 
-
 arguments = sys.argv
 words = arguments[1:]
 
