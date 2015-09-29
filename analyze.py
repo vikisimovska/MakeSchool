@@ -1,9 +1,9 @@
 import sys
 
 
-def createHistogram(fileName):
+def createHistogram(short_text):
     # 'frequency.txt'
-    f = open(fileName, 'r')
+    f = open(short_text, 'r')
     histogramDictionary = {}
     for line in f:
         for word in line.split():
@@ -14,7 +14,6 @@ def createHistogram(fileName):
                 value = 1
             histogramDictionary[word] = value
     f.close()
-    print(histogramDictionary)
     return histogramDictionary
 
 
@@ -37,8 +36,10 @@ def main(argv):
         sys.exit()
         pass
     else:
-        fileName = argv[1]
-        histogram = createHistogram(fileName)
+        short_text = argv[1]
+        histogram = createHistogram(short_text)
+        print('Histogram: ', histogram)
+        print()
         unique_words(histogram)
         wordToLook = argv[2]
         frequency(wordToLook, histogram)
